@@ -1,0 +1,21 @@
+{
+  "name": "COMP2003 DevContainer",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "mshr-h.veriloghdl",
+        "wavetrace.wavetrace"
+      ]
+    }
+  },
+  "forwardPorts": [11311],
+  "postCreateCommand": "sudo chown vscode:vscode /workspaces -R",
+  "runArgs": ["--memory=512m", "--cpus=1", "--net=host"],
+  // "runArgs": ["--net=host"],
+  "remoteUser": "vscode"
+}
