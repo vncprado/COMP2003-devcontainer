@@ -1,0 +1,104 @@
+$date
+	Tue Jul  7 13:09:14 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module main $end
+$var wire 1 ! q $end
+$var wire 1 " d $end
+$var wire 1 # clk $end
+$var integer 32 $ all_inputs [31:0] $end
+$var integer 32 % i [31:0] $end
+$scope module testing $end
+$var wire 1 " D $end
+$var wire 1 # clk $end
+$var wire 1 & nclk $end
+$var wire 1 ' q1 $end
+$var wire 1 ( Qbar2 $end
+$var wire 1 ) Qbar1 $end
+$var wire 1 ! Q $end
+$scope module d_latch1 $end
+$var wire 1 " D $end
+$var wire 1 & Enable $end
+$var reg 1 ' Q $end
+$var reg 1 ) Qbar $end
+$upscope $end
+$scope module d_latch2 $end
+$var wire 1 ' D $end
+$var wire 1 # Enable $end
+$var reg 1 ! Q $end
+$var reg 1 ( Qbar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1)
+x(
+0'
+1&
+b0 %
+b0 $
+0#
+0"
+x!
+$end
+#5
+1(
+0!
+0&
+1#
+b1 $
+b1 %
+#10
+0)
+1'
+1&
+0#
+1"
+b10 $
+b10 %
+#15
+0(
+1!
+0&
+1#
+b11 $
+b11 %
+#20
+1)
+0'
+1&
+0#
+0"
+b100 $
+b100 %
+#25
+1(
+0!
+0&
+1#
+b101 $
+b101 %
+#30
+0)
+1'
+1&
+0#
+1"
+b110 $
+b110 %
+#35
+0(
+1!
+0&
+1#
+b111 $
+b111 %
+#40
+b1000 %

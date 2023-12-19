@@ -1,0 +1,14 @@
+digraph "mod3_12" {
+label="mod3_12";
+rankdir="LR";
+remincross=true;
+n3 [ shape=octagon, label="v", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="y", color="black", fontcolor="black" ];
+v0 [ label="3" ];
+c8 [ shape=record, label="{{<p5> A|<p6> B}|$1\n$mod|{<p7> Y}}" ];
+c9 [ shape=record, label="{{<p5> A}|$2\n$reduce_bool|{<p7> Y}}" ];
+c8:p7:e -> c9:p5:w [color="black", style="setlinewidth(3)", label=""];
+n3:e -> c8:p5:w [color="black", style="setlinewidth(3)", label=""];
+c9:p7:e -> n4:w [color="black", label=""];
+v0:e -> c8:p6:w [color="black", style="setlinewidth(3)", label=""];
+}

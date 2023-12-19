@@ -1,0 +1,88 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x55b89cea2d00 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x55b89cea2e90 .scope module, "main" "main" 3 11;
+ .timescale -9 -9;
+v0x55b89cef3260_0 .var "a", 0 0;
+v0x55b89cef3320_0 .var "b", 0 0;
+v0x55b89cef33f0_0 .var "c", 0 0;
+v0x55b89cef34f0_0 .var "d", 0 0;
+v0x55b89cef35c0_0 .net "y", 0 0, L_0x55b89cef39d0;  1 drivers
+S_0x55b89cea3020 .scope task, "apply_test" "apply_test" 3 14, 3 14 0, S_0x55b89cea2e90;
+ .timescale -9 -9;
+v0x55b89cecce30_0 .var "test_vec", 3 0;
+TD_main.apply_test ;
+    %load/vec4 v0x55b89cecce30_0;
+    %split/vec4 1;
+    %store/vec4 v0x55b89cef34f0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x55b89cef33f0_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x55b89cef3320_0, 0, 1;
+    %store/vec4 v0x55b89cef3260_0, 0, 1;
+    %vpi_call/w 3 17 "$display", "d: t=%04d a=%b b=%b c=%b d=%b y=%b", $time, v0x55b89cef3260_0, v0x55b89cef3320_0, v0x55b89cef33f0_0, v0x55b89cef34f0_0, v0x55b89cef35c0_0 {0 0 0};
+    %delay 10, 0;
+    %end;
+S_0x55b89cef29a0 .scope module, "dut" "timing_g" 3 23, 3 3 0, S_0x55b89cea2e90;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "c";
+    .port_info 4 /INPUT 1 "d";
+L_0x55b89cecac00/d .functor AND 1, v0x55b89cef3260_0, v0x55b89cef3320_0, C4<1>, C4<1>;
+L_0x55b89cecac00 .delay 1 (2,2,2) L_0x55b89cecac00/d;
+L_0x55b89cef3820/d .functor OR 1, L_0x55b89cecac00, v0x55b89cef33f0_0, C4<0>, C4<0>;
+L_0x55b89cef3820 .delay 1 (3,3,3) L_0x55b89cef3820/d;
+L_0x55b89cef39d0/d .functor AND 1, L_0x55b89cef3820, v0x55b89cef34f0_0, C4<1>, C4<1>;
+L_0x55b89cef39d0 .delay 1 (2,2,2) L_0x55b89cef39d0/d;
+v0x55b89cef2c20_0 .net "a", 0 0, v0x55b89cef3260_0;  1 drivers
+v0x55b89cef2ce0_0 .net "b", 0 0, v0x55b89cef3320_0;  1 drivers
+v0x55b89cef2da0_0 .net "c", 0 0, v0x55b89cef33f0_0;  1 drivers
+v0x55b89cef2e70_0 .net "d", 0 0, v0x55b89cef34f0_0;  1 drivers
+v0x55b89cef2f30_0 .net "n1", 0 0, L_0x55b89cecac00;  1 drivers
+v0x55b89cef3040_0 .net "n2", 0 0, L_0x55b89cef3820;  1 drivers
+v0x55b89cef3100_0 .net "y", 0 0, L_0x55b89cef39d0;  alias, 1 drivers
+    .scope S_0x55b89cea2e90;
+T_1 ;
+    %vpi_call/w 3 26 "$dumpvars" {0 0 0};
+    %vpi_call/w 3 28 "$monitor", "m: t=%04d a=%b b=%b c=%b d=%b n1=%b n2=%b y=%b", $time, v0x55b89cef3260_0, v0x55b89cef3320_0, v0x55b89cef33f0_0, v0x55b89cef34f0_0, v0x55b89cef2f30_0, v0x55b89cef3040_0, v0x55b89cef35c0_0 {0 0 0};
+    %vpi_call/w 3 30 "$display", "first path setup" {0 0 0};
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v0x55b89cecce30_0, 0, 4;
+    %fork TD_main.apply_test, S_0x55b89cea3020;
+    %join;
+    %vpi_call/w 3 32 "$display", "first path change" {0 0 0};
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x55b89cecce30_0, 0, 4;
+    %fork TD_main.apply_test, S_0x55b89cea3020;
+    %join;
+    %delay 10, 0;
+    %vpi_call/w 3 35 "$display", "second path setup" {0 0 0};
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v0x55b89cecce30_0, 0, 4;
+    %fork TD_main.apply_test, S_0x55b89cea3020;
+    %join;
+    %vpi_call/w 3 37 "$display", "second path change" {0 0 0};
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x55b89cecce30_0, 0, 4;
+    %fork TD_main.apply_test, S_0x55b89cea3020;
+    %join;
+    %vpi_call/w 3 40 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "gate_timing.v";

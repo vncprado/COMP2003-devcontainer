@@ -1,0 +1,25 @@
+`timescale 1ns/1ns
+
+module main;
+    reg16_t out;
+    logic clk, reset;
+    as_ctl_t as_ctl;
+    shift_ctl_t shift_ctl;
+    logic r1_ld, r0_ld;
+
+    seq_gen_dp dut(out, clk, reset, as_ctl, shift_ctl, r1_ld, r0_ld);
+
+    initial $monitor( "t=%3d clk=%b reset=%b as_ctl=%b shift_ctl=%b r1_ld=%b r0_ld=%b out=%b", $time,
+                        clk, reset,
+                        as_ctl, shift_ctl,
+                        r1_ld, r0_ld, out);
+
+    initial begin
+        // R0 <= 1
+        as_ctl = AS_A;
+        shift_ctl=SH_ONE;
+        r0_ld = 1;
+        // R1 <= R0
+    end
+
+endmodule

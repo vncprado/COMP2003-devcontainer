@@ -1,0 +1,84 @@
+$date
+	Fri Oct  6 12:50:59 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module main $end
+$var wire 2 ! s [1:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 2 $ cur [1:0] $end
+$var reg 2 % next [1:0] $end
+$scope module st $end
+$var wire 1 " clk $end
+$var wire 2 & d [1:0] $end
+$var wire 1 # reset $end
+$var reg 2 ' q [1:0] $end
+$upscope $end
+$upscope $end
+$scope task check_next $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx '
+bx &
+bx %
+bx $
+1#
+0"
+bx !
+$end
+#5
+b1 %
+b1 &
+b0 !
+b0 $
+b0 '
+1"
+#10
+0"
+0#
+#15
+b11 %
+b11 &
+b1 !
+b1 $
+b1 '
+1"
+#20
+0"
+#25
+b10 %
+b10 &
+b11 !
+b11 $
+b11 '
+1"
+#30
+0"
+#35
+b0 %
+b0 &
+b10 !
+b10 $
+b10 '
+1"
+#40
+0"
+#45
+b1 %
+b1 &
+b0 !
+b0 $
+b0 '
+1"
+#50

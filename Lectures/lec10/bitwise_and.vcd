@@ -1,0 +1,71 @@
+$date
+	Mon Sep 25 12:20:13 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module main $end
+$scope module dut $end
+$var wire 4 ! a [3:0] $end
+$var wire 4 " b [3:0] $end
+$var wire 4 # y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 #
+b1 "
+b0 !
+$end
+#10
+b1 #
+b1 !
+#20
+b0 #
+b10 !
+#30
+b1 #
+b11 !
+#40
+b0 #
+b100 !
+#50
+b1 #
+b101 !
+#60
+b0 #
+b110 !
+#70
+b1 #
+b111 !
+#80
+b0 #
+b1000 !
+#90
+b1 #
+b1001 !
+#100
+b0 #
+b1010 !
+#110
+b1 #
+b1011 !
+#120
+b0 #
+b1100 !
+#130
+b1 #
+b1101 !
+#140
+b0 #
+b1110 !
+#150
+b1 #
+b1111 !
+#160
+b0 #
+b0 !

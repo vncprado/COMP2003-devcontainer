@@ -1,0 +1,64 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x560eb8858dd0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x560eb8858f60 .scope module, "main" "main" 3 3;
+ .timescale -9 -9;
+v0x560eb88a4320_0 .net *"_ivl_4", 1 0, L_0x560eb88a4bd0;  1 drivers
+v0x560eb88a4400_0 .net "a", 0 0, L_0x560eb88a4a40;  1 drivers
+v0x560eb88a44f0_0 .var/i "all_inputs", 31 0;
+v0x560eb88a45c0_0 .net "b", 0 0, L_0x560eb88a4ae0;  1 drivers
+v0x560eb88a4690_0 .var/i "i", 31 0;
+v0x560eb88a4780_0 .net "y", 0 0, L_0x560eb88a4820;  1 drivers
+L_0x560eb88a4a40 .part L_0x560eb88a4bd0, 1, 1;
+L_0x560eb88a4ae0 .part L_0x560eb88a4bd0, 0, 1;
+L_0x560eb88a4bd0 .part v0x560eb88a44f0_0, 0, 2;
+S_0x560eb8880600 .scope module, "testing" "and_gate" 3 8, 4 1 0, S_0x560eb8858f60;
+ .timescale -9 -9;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_0x560eb88a4820/d .functor AND 1, L_0x560eb88a4a40, L_0x560eb88a4ae0, C4<1>, C4<1>;
+L_0x560eb88a4820 .delay 1 (2,2,2) L_0x560eb88a4820/d;
+v0x560eb8880830_0 .net "a", 0 0, L_0x560eb88a4a40;  alias, 1 drivers
+v0x560eb88a4140_0 .net "b", 0 0, L_0x560eb88a4ae0;  alias, 1 drivers
+v0x560eb88a4200_0 .net "y", 0 0, L_0x560eb88a4820;  alias, 1 drivers
+    .scope S_0x560eb8858f60;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x560eb88a4690_0, 0, 32;
+    %pushi/vec4 4, 0, 32;
+T_0.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_0.1, 5;
+    %jmp/1 T_0.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %load/vec4 v0x560eb88a4690_0;
+    %store/vec4 v0x560eb88a44f0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call/w 3 19 "$display", "t=%04d a=%b b=%b y=%b", $time, v0x560eb88a4400_0, v0x560eb88a45c0_0, v0x560eb88a4780_0 {0 0 0};
+    %load/vec4 v0x560eb88a4690_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x560eb88a4690_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %pop/vec4 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_and_gate.v";
+    "and_gate.v";

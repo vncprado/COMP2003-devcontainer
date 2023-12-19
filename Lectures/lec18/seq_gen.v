@@ -1,0 +1,5 @@
+`include "types.v"
+`include "ld_reg.v"
+`include "as_alu.v"
+`include "shifter.v"
+`include "seq_gen_dp.v"

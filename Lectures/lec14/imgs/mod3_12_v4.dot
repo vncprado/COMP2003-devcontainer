@@ -1,0 +1,25 @@
+digraph "mod3_12" {
+label="mod3_12";
+rankdir="LR";
+remincross=true;
+n4 [ shape=diamond, label="m", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="v", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="y", color="black", fontcolor="black" ];
+v0 [ label="1" ];
+c10 [ shape=record, label="{{<p7> A|<p8> B}|$3\n$eq|{<p9> Y}}" ];
+v1 [ label="2" ];
+c11 [ shape=record, label="{{<p7> A|<p8> B}|$4\n$eq|{<p9> Y}}" ];
+c12 [ shape=record, label="{{<p7> A|<p8> B}|$5\n$logic_or|{<p9> Y}}" ];
+v2 [ label="3" ];
+c13 [ shape=record, label="{{<p7> A|<p8> B}|$2\n$mod|{<p9> Y}}" ];
+c10:p9:e -> c12:p7:w [color="black", label=""];
+c11:p9:e -> c12:p8:w [color="black", label=""];
+c13:p9:e -> n4:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> c10:p7:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> c11:p7:w [color="black", style="setlinewidth(3)", label=""];
+n5:e -> c13:p7:w [color="black", style="setlinewidth(3)", label=""];
+c12:p9:e -> n6:w [color="black", label=""];
+v0:e -> c10:p8:w [color="black", style="setlinewidth(3)", label=""];
+v1:e -> c11:p8:w [color="black", style="setlinewidth(3)", label=""];
+v2:e -> c13:p8:w [color="black", style="setlinewidth(3)", label=""];
+}
