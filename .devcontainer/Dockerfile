@@ -39,7 +39,9 @@ RUN apt-get update && \
     qemu-system-arm \
     qemu-user \
     bison \
-    flex
+    flex \
+    python3 \
+    python3.8-venv
 
 # Clone Icarus Verilog repository
 RUN git clone https://github.com/steveicarus/iverilog.git
