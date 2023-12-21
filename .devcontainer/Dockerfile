@@ -41,7 +41,9 @@ RUN apt-get update && \
     bison \
     flex \
     python3 \
-    python3.8-venv
+    python3.8-venv \
+    default-jdk \
+    default-jre
 
 # Clone Icarus Verilog repository
 RUN git clone https://github.com/steveicarus/iverilog.git
