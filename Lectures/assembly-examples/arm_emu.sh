@@ -122,7 +122,8 @@ fi
 # arm-linux-gnueabi-objdump -S $elf
 # arm-linux-gnueabi-objcopy -j .text -j .data -O ihex $elf $hex
 
-. ${DIR}/py3/bin/activate
+# The following are here for documentation
+# . ${DIR}/py3/bin/activate
 #. ./py3/bin/activate
 
 # invoke the simulator
