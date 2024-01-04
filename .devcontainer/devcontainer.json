@@ -1,6 +1,6 @@
 {
   "name": "COMP2003 DevContainer",
-  "dockerFile": "Dockerfile",
+  "image": "vncprado/comp2003:test",
   "customizations": {
     "vscode": {
       "settings": {
