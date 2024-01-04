@@ -1,6 +1,6 @@
 {
   "name": "COMP2003 DevContainer",
-  "image": "vncprado/comp2003:test",
+  "image": "vncprado/comp2003:latest",
   "customizations": {
     "vscode": {
       "settings": {
