@@ -7,10 +7,7 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       },
       "extensions": [
-<<<<<<< HEAD
         // "ms-azuretools.vscode-docker",
-=======
->>>>>>> 68a62d6fc852e971fb6375d0d5f4568606c4b486
         "mshr-h.veriloghdl",
         "wavetrace.wavetrace",
         "ms-python.python",
