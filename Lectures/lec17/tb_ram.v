@@ -30,6 +30,7 @@ module main;
         // write a test pattern to first 10 memory locations
         for( index=0; index < 10; index = index + 1 ) begin
             write_mem( index, index+1 );
+            $display( "Writting: %4x", index + 1 );
         end
         $display("Memory Contents");
         // Read the memory

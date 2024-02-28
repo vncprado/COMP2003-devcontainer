@@ -1,0 +1,103 @@
+$date
+	Fri Feb  9 14:15:45 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module main $end
+$var wire 3 ! count [2:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module cnt $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var reg 3 $ count [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx $
+1#
+0"
+bx !
+$end
+#5
+1"
+#7
+b0 !
+b0 $
+0#
+#10
+0"
+#15
+1"
+#17
+b11 !
+b11 $
+#20
+0"
+#25
+1"
+#27
+b110 !
+b110 $
+#30
+0"
+#35
+1"
+#37
+b1 !
+b1 $
+#40
+0"
+#45
+1"
+#47
+b100 !
+b100 $
+#50
+0"
+#55
+1"
+#57
+b111 !
+b111 $
+#60
+0"
+#65
+1"
+#67
+b10 !
+b10 $
+#70
+0"
+#75
+1"
+#77
+b101 !
+b101 $
+#80
+0"
+#85
+1"
+#87
+b0 !
+b0 $
+#90
+0"
+#95
+1"
+#97
+b11 !
+b11 $
+#100
+0"
+#105
+1"
+#107
+b110 !
+b110 $
