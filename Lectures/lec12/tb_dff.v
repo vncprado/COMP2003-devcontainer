@@ -1,5 +1,6 @@
 `timescale 1ns/1ns
-parameter delay = 2;
+
+// parameter delay = 2;
 module main;
     logic q, qbar, d, clk;
 

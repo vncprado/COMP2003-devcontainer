@@ -7,8 +7,11 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       },
       "extensions": [
+        // "ms-azuretools.vscode-docker",
         "mshr-h.veriloghdl",
-        "wavetrace.wavetrace"
+        "wavetrace.wavetrace",
+        "ms-python.python",
+				"ms-python.vscode-pylance"
       ]
     }
   },
