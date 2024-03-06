@@ -6,9 +6,9 @@
     .arm
 
 main:
-    MOV  R0, #0         // R0 = 0
-    SUB  R0, R0, #1     // R0 = -1, do not set N
-    MOV  R0, #0 
-    SUBS R0, R0, #1     // R0 = -1, set N
+    MOV  R0, #9         // R0 = 9
+    SUB  R0, R0, #1     // R0 = 8, do not set N
+    MOV  R0, #9 
+    SUBS R0, R10, #1     // R0 = 8, set N
     mov pc, lr
     .size main, .-main
