@@ -9,6 +9,6 @@ main:
     MOV  R0, #9         // R0 = 9
     SUB  R0, R0, #1     // R0 = 8, do not set N
     MOV  R0, #9 
-    SUBS R0, R10, #1     // R0 = 8, set N
+    SUBS R0, R0, #1     // R0 = 8, set N
     mov pc, lr
     .size main, .-main

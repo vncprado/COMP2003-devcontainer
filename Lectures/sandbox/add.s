@@ -1,4 +1,4 @@
-    @ cmp_add.s
+    @ a comment
     .arch armv4
     .text
     .align 2
@@ -6,11 +6,8 @@
     .arm
 
 main:
-    MOV r0, #2    
-    MOV r1, #2
-    CMP R0, R1
-    ADDEQ R0, R0, R1
-
+    mov r0, #5
+    mov r1, #10
+    add r0, r0, r1
     mov pc, lr
     .size main, .-main
-

@@ -1,1 +1,1 @@
-Use examples and code in the folder COMP2003-CA/assembly-examples
+Use examples and code in the folder Lectures/assembly-examples
