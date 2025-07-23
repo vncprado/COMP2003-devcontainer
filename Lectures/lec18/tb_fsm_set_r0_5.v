@@ -1,5 +1,5 @@
 `include "seq_gen.v"
-`include "fsm_set_r0_r1.v"
+`include "fsm_set_r0_5.v"
 
 module main;
     reg16_t seq_out;

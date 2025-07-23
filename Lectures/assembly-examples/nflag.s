@@ -7,6 +7,7 @@
 
 main:
     mov    r0, #0         // r0 = 0,
+    movs    r0, #0         // r0 = 0,
     subs   r0, r0, #1     // r0 = -1, sets N flag
     adds   r0, r0, #1     // r0 = 0, clears N flag, causes a carry
     sub    r0, r0, #1     // r0 = -1, flags not affected
