@@ -1,3 +1,9 @@
+/*
+
+gcc -Wall -O --static recur_sum.c
+ ./a.out
+*/
+
 #include <stdio.h>
 
 static int rsum( int n ) {
