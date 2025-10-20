@@ -9,7 +9,7 @@ module main;
     reg16_t data_v;
     integer index;
 
-    reg_file dut( rn, rm, rd, n, m, d, dw, reset, clk);
+    reg_file dut( .rn(rn), .rm(rm), .rd(rd), .n(n), .m(m), .d(d), .dw(dw), .reset(reset), .clk(clk));
 
     task automatic reset_reg;
        reset = 1; clk = 0; #5; clk = 1; #5; reset = 0;
